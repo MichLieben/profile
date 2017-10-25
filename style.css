@@ -1,0 +1,129 @@
+body {
+  background-color: rgb(245, 245, 245);
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+ul {
+  list-style-type: none
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  color: #00C0EF;
+}
+
+a:hover {
+  color: #00C0EF;
+}
+
+.layout {
+  width: 60%;   /* This sets the width */
+  margin: 0 auto; /* This automatically sets left/right margins */
+}
+
+.card {
+  background-color: white;
+  margin: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: rgb(220, 220, 220);
+}
+
+#round {
+  border-radius: 100px;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.list-inline {
+  padding-left: 0px;
+}
+
+/*h1 {
+  text-align: center;
+}*/
+
+@import "bourbon";
+
+
+.wrap{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(245, 245, 245);
+  display: inline-block;
+  margin: 20px auto 30px auto;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.clicker{
+  background-color: rgb(245, 245, 245);
+  outline: none;
+  font-weight: 600;
+  position:absolute;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  height: 64px;
+  width: 64px;
+  left: 8px;
+  top: 8px;
+  border-radius: 100px;
+  z-index: 2;
+}
+
+.clicker:active{
+  transform: translate(0, 1px);
+  background-color: rgb(245, 245, 245);
+  height: 63px;
+  box-shadow: 0px 1px 0 0 rgb(190,190,190) inset;
+}
+
+.circle{
+  position: relative;
+  border-radius:40px;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+}
+
+
+
+.clicker:hover + .circle, .clicker:active + .circle {
+    animation: rotator linear .8s infinite;
+}
+
+@keyframes rotator{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+
+
+.angled {
+      background-image: linear-gradient(45deg,
+                rgb(245, 245, 245) 0%,
+                rgb(245, 245, 245) 30%,
+                rgb(20,190,235) 30%,
+                rgb(20,190,235) 70%,
+                rgb(245, 245, 245) 70%,
+                rgb(245, 245, 245) 100%);
+    }
+
+.divider{
+    width: 5px;
+    height: auto;
+    display: inline-block;
+}
+
+
